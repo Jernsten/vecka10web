@@ -11,4 +11,25 @@ function renderMovie(movie) {
     });
 }
 
+function changeStarRating(grade, stars){
+
+    for (let i = 0; i <= grade; i++) {
+        stars[i].classList.add("filled");
+        stars[i].classList.remove("empty");
+    };
+
+    for (let i = grade+1; i<=4; i++) {
+        stars[i].classList.remove("filled");
+        stars[i].classList.add("empty");
+    };
+}
+
 renderMovie(movieData);
+
+var stars = document.querySelectorAll(".stars>span");
+
+for (let i = 0; i < stars.length; i++) {
+    stars[i].addEventListener("click", function(){
+        changeStarRating(i, stars);
+    })
+};

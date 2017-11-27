@@ -68,3 +68,25 @@ Appenda eller prependa den
 let existingNode = document.getElementById("someId");
 existingNode.appendChild(newnode);
 
+__________________________________
+
+// Generisk eventlistner
+node.addEventlistner("nameOfEvent",functionToRun);
+// ex
+function goBoom(){
+	console.log("Boom");
+}
+node.addEventlistner("click",goBoom); // goBoom() blir fel, då exikveras goBoom direkt när appen körs.
+node.addEventlistner("click",funcktion(){
+	alert("blabla");
+	});
+
+The eventhandler is called with an event object, whick might be useful for some events:
+inputFieldNode.addEventlistner("keyup", function(e){
+	if (e.key === "Enter" || e.keyCode === 13){
+		submitForm();
+	}
+});
+
+
+

@@ -1,14 +1,13 @@
 #poster {
   display: flex;
   flex-direction: row;
-  height: 15rem;
   padding: 0.5em;
   background-color: beige;
-  max-width: 500px;
+  max-width: 25em;
 }
 #poster #imgContainer {
-  max-height: 240px;
-  max-width: 163px;
+  max-height: 13em;
+  max-width: 8em;
 }
 #poster #imgContainer img {
   max-height: 100%;
@@ -18,13 +17,11 @@
   flex-grow: 1;
 }
 #details h2 {
-  width: 100%;
   margin-top: 0em;
   font-family: 'Permanent Marker', cursive;
   font-size: 1.3em;
 }
 #details h3 {
-  width: 100%;
   font-size: 0.7rem;
   color: #00000082;
 }
@@ -32,4 +29,10 @@
   padding-left: 1em;
   width: 100%;
   font-size: 0.8em;
+}
+.stars span.filled {
+  color: black;
+}
+.stars span.empty {
+  color: #b4b4b4;
 }
