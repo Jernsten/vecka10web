@@ -1,44 +1,53 @@
 #poster {
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     padding: 0.5em;
     background-color: beige;
     max-width: 25em;
+    border-style: solid;
+    border-color: #d9dabd;
+    border-radius: 10px;
 
     #imgContainer {
-        max-height: 13em;
-        max-width: 8em;
+        max-height: 15em;
     
         img {
-            max-height: 100%;
+            max-height: inherit;
+            border-radius: 5px;
         }
     }
-}
 
-#details {
-    padding: 1rem;
-    flex-grow: 1;
-
-    h2 {
-        margin-top: 0em;
-        font-family: 'Permanent Marker', cursive;
-        font-size: 1.3em;
+    #details {
+        padding: 1rem;
+        flex-grow: 1;
+        
+        .stars {
+            user-select: none;
+            cursor: pointer;
+            font-size: 0.7em;
+        
+            color: rgb(180, 180, 180);
+        
+            span.filled {
+                    color: black;
+            }
+        }
+    
+        h2 {
+            margin-top: 0em;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 1.3em;
+        }
+        h3 {
+            font-size: 0.7rem;
+            color: #00000082;
+        }
+        ul {
+            padding-left: 1em;
+            width: 100%;
+            font-size: 0.8em;
+        }
     }
-    h3 {
-        font-size: 0.7rem;
-        color: #00000082;
-    }
-    ul {
-        padding-left: 1em;
-        width: 100%;
-        font-size: 0.8em;
-    }
-}
 
-.stars span.filled {
-    color: black;
-}
-
-.stars span.empty {
-    color: rgb(180, 180, 180);
 }

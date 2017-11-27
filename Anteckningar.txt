@@ -88,5 +88,49 @@ inputFieldNode.addEventlistner("keyup", function(e){
 	}
 });
 
+______________________________________
+JQuery
 
+let collection = $(".someClass");
 
+Vi slipper loopa...
+collection.html("<strong>verboten</strong>");
+collection.text("hej");
+collection.addClass("hide");
+collection.attr("data-ref","EkE");
+collection.empty(); // dödar alla barnen
+
+JQuery bryr sig inte om det är en eller flera noder som kommer ut.
+
+for (let node in nodes) // för loop i javascript
+
+$(".french").html("<span>haha</span>");
+
+SKAPA NYA element
+let newCollection = $("<span>");
+let newCollection = $("
+	<div></div>
+	<h2></h2>");
+newCollection.appendTo("selector for node");
+
+$("#submitbutton").on("click", function);
+$("#submit").click(function);
+
+JQuery makes it very easy to do event delegation,
+it lets us listen to events on many elements - wich might not even exist yet.
+
+<ul>
+<li>
+</ul>
+$("ul").on("click", "li", function(e){ // fångar alla klick på nu existerande eller framtida <li>
+	let opt = $(e.target).attr("data-option-id", "4"); // e.target = noden som klickades
+})
+
+__________________________________
+LESS
+
+@bgcolor: #ffffff;
+
+.sidebar {
+	background-color: @bgcolor;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "main": "code.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "printme": "echo \"This is some shieat\"",
+    "styles": "lessc styles.less styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jernsten/vecka10web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jernsten/vecka10web/issues"
+  },
+  "homepage": "https://github.com/Jernsten/vecka10web#readme",
+  "dependencies": {
+    "react": "^16.1.1"
+  },
+  "devDependencies": {
+    "less": "^2.7.3",
+    "mocha": "^4.0.1"
+  },
+  "description": ""
+}
