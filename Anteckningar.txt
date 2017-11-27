@@ -1,0 +1,70 @@
+Centrera saker horisontellt
+.contentBlock {
+	margin: 0 auto; // (top/bottom 0, right/left auto)
+} // Funkar bara om blocket har en set width, annars tar blocket upp 100% av förälderns bredd
+
+Välja element efter vilket attribut de har
+
+[data-class=skeleton] { // samtdliga element som har attributet data-class med värde skeleton
+	...
+}
+
+Begränsa en bilds bredd genom max- prefix
+.myImage {
+	max-width: 300px;
+	max-height: 400px;
+} // Lägg en div runt bilden om det inte funkar, använde klassen på den divven.
+
+.myElem {
+	user-select: none; // Förhindra att musen markerar text
+	cursor: pointer;   // Indikerar att någonting är klickbart, pekar blir en handske.
+}			   // Finns risk att det inte går att klicka på vissa mobiler om ej cursor: pointer;
+
+// To lay out children of an element as columns we use flexbox:
+.container { 
+	display: flex;
+	flex-direction: row;
+}
+
+By default the columns will get equal width. If you have fixed-width columns you can make the other columns share the leftover space by giving them:
+
+.columnThatShouldGrow {
+  flex-grow: 1;
+}
+
+--------------------
+
+DOM-noder är html-element som representeras i DOMen
+Hur man få referens till en nod:
+let node = document.body;
+let node = document.getElementById("someId");
+let node = document.querySelector("div > p:first-child");
+
+Hur man får en lista av matching nodes:
+let nodes = document.getElementsByTagName("div");
+let nodes = document.getElementsByClassName("someClassName");
+let nodes = document.querySelectorAll("div > p:first-child");
+
+Man kan skaffa referenser till andra dom.noder via en annan referens, typ:
+node.parent; // ett förälderelement
+node.children; // en html-lista med alla barn
+
+Adda en class
+node.classList.add("someClass");
+node.classList.remove("someClass");
+node.classList.contains("someClass");
+
+Ändra innehåll i en nod // Raderar allt som fanns i noden
+node.innerText = "Hello";
+node.innerHTML = "<strong>Hello</strong>";
+
+Attribut 
+node.getAttribute("data-ref"); // får ut värdet
+node.setAttribute("data-ref","bla"); // sätter värdet
+
+Skapa en nod
+let newNode = document.createElement("div");
+Appenda eller prependa den
+let existingNode = document.getElementById("someId");
+existingNode.appendChild(newnode);
+
