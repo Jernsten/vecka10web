@@ -179,3 +179,8 @@ renderMovie(movieData);
     filename: 'bundle.js' // utfilen
   }
 };
+
+
+__________________________________
+Om man vill linta något kan man skriva
+eslint . --fix efteråt

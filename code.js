@@ -15,20 +15,21 @@ function renderMovie(movie) {
 
 function changeStarRating(index) {
     if (index == 0 && $(".stars span").eq(0).hasClass("filled") && !$(".stars span").eq(1).hasClass("filled")) {
-        $(".stars span").removeClass("filled");    
+        $(".stars span").removeClass("filled");
         return;
     }
 
     $(".stars span").removeClass("filled");
 
     for (let i = 0; i < 5; i++) {
-    
+
         if (i <= index) {
             $(".stars span").eq(i).addClass("filled");
         }
     }
 }
-import {movieData} from './data';
+
+import { movieData } from "./data";
 renderMovie(movieData);
 
 $(".stars").on("click", "span", function (e) {
