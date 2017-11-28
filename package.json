@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "code.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "webpack",
+    "test": "echo \"npError: no test specified\" && exit 1",
     "printme": "echo \"This is some shieat\"",
     "styles": "lessc styles.less styles.css"
   },
@@ -18,11 +19,13 @@
   },
   "homepage": "https://github.com/Jernsten/vecka10web#readme",
   "dependencies": {
+    "jquery": "^3.2.1",
     "react": "^16.1.1"
   },
   "devDependencies": {
     "less": "^2.7.3",
-    "mocha": "^4.0.1"
+    "mocha": "^4.0.1",
+    "webpack": "^3.8.1"
   },
   "description": ""
 }

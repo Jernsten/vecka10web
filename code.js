@@ -1,3 +1,5 @@
+let $ = require("jquery");
+
 function renderMovie(movie) {
     $("#imgPic").attr("src", movie.imgUrl);
     $("#movieTitle").text(movie.title);
@@ -22,7 +24,7 @@ function changeStarRating(index) {
         }
     }
 }
-
+import {movieData} from './data';
 renderMovie(movieData);
 
 $(".stars").on("click", "span", function (e) {

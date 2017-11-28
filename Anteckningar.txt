@@ -134,3 +134,48 @@ LESS
 .sidebar {
 	background-color: @bgcolor;
 }
+
+_________________________________________
+WEBPACK ---------------------
+
+Låter oss använda moduler.
+Den bundlar koden i en fil
+Den kan också göra andra transpilings (vad det nu är?) // typ minifiera koden (ta bort white space) etc
+
+MODULER.
+Webpack låter oss använda Node moduler.
+
+istället för globala variabler så kan man:
+
+module.exports = {
+	title: "inception",
+}
+
+... i en annan fil
+let movieData = require("./data"); // Viktigt att skriva en relativ sökväg.
+// data.js och code.js är syskon i samma mapp, men ("data") funkar inte,
+// "./ prefixet gör att det blir tydligt att det är en npm modul det är tal om, och inte en variabel.
+
+renderMovie(movieData):
+
+Fördelar:
+Det är tydligt vad en fil exporterar och importerar.
+Filer exekveras i separata scopes
+Webpack kan bundla ihop allt i en fil.
+
+Om det i data.js skrivs
+export const movieData = {
+  title: 'Inception', // etc
+};
+
+Kan man i code.js importera 
+import {movieData} from './data';
+
+renderMovie(movieData);
+
+ module.exports = {
+  entry: './code.js', // Entry file
+  output: {
+    filename: 'bundle.js' // utfilen
+  }
+};
