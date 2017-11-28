@@ -6,7 +6,9 @@
     "bundle": "webpack",
     "test": "echo \"npError: no test specified\" && exit 1",
     "printme": "echo \"This is some shieat\"",
-    "styles": "lessc styles.less styles.css"
+    "styles": "lessc styles.less distribution/styles.css",
+    "copyindex": "cp index.html distribution/index.html",
+    "build": "npm run bundle && npm run styles && npm run copyindex"
   },
   "repository": {
     "type": "git",

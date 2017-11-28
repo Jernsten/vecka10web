@@ -14,7 +14,10 @@ function renderMovie(movie) {
 }
 
 function changeStarRating(index) {
-    
+    if (index == 0 && $(".stars span").eq(0).hasClass("filled") && !$(".stars span").eq(1).hasClass("filled")) {
+        return;
+    }
+
     $(".stars span").removeClass("filled");
 
     for (let i = 0; i < 5; i++) {
@@ -29,5 +32,4 @@ renderMovie(movieData);
 
 $(".stars").on("click", "span", function (e) {
     changeStarRating($(e.target).index());
-
 })
