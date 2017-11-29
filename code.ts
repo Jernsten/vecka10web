@@ -1,39 +1,18 @@
-import * as $ from "jquery";
+import * as angular from "angular";
 import { movieData } from "./data";
 import { Review } from "./interfaces";
 
-function renderMovie(data: Review) {
-    $("#imgPic").attr("src", data.imgUrl);
-    $("#movieTitle").text(data.title);
-    $("#movieDescription").text(data.description);
-    $("#pageTitle").text(data.pageTitle);
+const app = angular.module("movieCardApp", []);
 
-    const ul = document.getElementById("movieActors");
+app.controller("movieCardAppController", ($scope) => {
+    $scope.movie = movieData;
 
-    data.actors.forEach((element) => {
-        const li = ul.appendChild(document.createElement("li"));
-        li.innerText = element;
-    });
-}
-
-function changeStarRating(index) {
-    if (index === 0 && $(".stars span").eq(0).hasClass("filled") && !$(".stars span").eq(1).hasClass("filled")) {
-        $(".stars span").removeClass("filled");
-        return;
-    }
-
-    $(".stars span").removeClass("filled");
-
-    for (let i = 0; i < 5; i++) {
-
-        if (i <= index) {
-            $(".stars span").eq(i).addClass("filled");
+    $scope.rating = 0;
+    $scope.changeStarRating = (newRating) => {
+        if (newRating === $scope.rating) {
+            $scope.rating = 0;
+        } else {
+            $scope.rating = newRating;
         }
-    }
-}
-
-renderMovie(movieData);
-
-$(".stars").on("click", "span", (e) => {
-    changeStarRating($(e.target).index());
+    };
 });

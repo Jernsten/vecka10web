@@ -24,11 +24,11 @@
   },
   "homepage": "https://github.com/Jernsten/vecka10web#readme",
   "dependencies": {
-    "jquery": "^3.2.1",
+    "angular": "^1.6.7",
     "react": "^16.1.1"
   },
   "devDependencies": {
-    "@types/jquery": "^3.2.16",
+    "@types/angular": "^1.6.39",
     "less": "^2.7.3",
     "mocha": "^4.0.1",
     "stylelint": "^8.3.1",
@@ -39,4 +39,3 @@
   },
   "description": ""
 }
-
