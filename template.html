@@ -11,22 +11,22 @@
 </head>
 
 <body ng-app="movieCardApp" ng-cloak>
-    <div id="poster" ng-controller="movieCardAppController">
+    <div id="poster" ng-controller="movieCardAppController as ctrl">
         <div id="imgContainer">
-            <img id="imgPic" ng-src="{{movie.imgUrl}}">
+            <img id="imgPic" ng-src="{{ctrl.movie.imgUrl}}">
         </div>
         <div id="details">
             <div class="stars">
-                <span ng-class="{filled: rating>=1}" ng-click="changeStarRating(1)">&#9733;</span>
-                <span ng-class="{filled: rating>=2}" ng-click="changeStarRating(2)">&#9733;</span>
-                <span ng-class="{filled: rating>=3}" ng-click="changeStarRating(3)">&#9733;</span>
-                <span ng-class="{filled: rating>=4}" ng-click="changeStarRating(4)">&#9733;</span>
-                <span ng-class="{filled: rating==5}" ng-click="changeStarRating(5)">&#9733;</span>
+                <span ng-class="{filled: ctrl.rating>=1}" ng-click="ctrl.changeStarRating(1)">&#9733;</span>
+                <span ng-class="{filled: ctrl.rating>=2}" ng-click="ctrl.changeStarRating(2)">&#9733;</span>
+                <span ng-class="{filled: ctrl.rating>=3}" ng-click="ctrl.changeStarRating(3)">&#9733;</span>
+                <span ng-class="{filled: ctrl.rating>=4}" ng-click="ctrl.changeStarRating(4)">&#9733;</span>
+                <span ng-class="{filled: ctrl.rating==5}" ng-click="ctrl.changeStarRating(5)">&#9733;</span>
             </div>
-            <h2 id="movieTitle">{{movie.title}}</h2>
-            <h3 id="movieDescription">{{movie.description}}</h3>
+            <h2 id="movieTitle">{{ctrl.movie.title}}</h2>
+            <h3 id="movieDescription">{{ctrl.movie.description}}</h3>
             <ul id="movieActors">
-                <li ng-repeat="actor in movie.actors">{{actor}}</li>
+                <li ng-repeat="actor in ctrl.movie.actors">{{actor}}</li>
             </ul>
         </div>
     </div>

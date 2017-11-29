@@ -4,15 +4,16 @@ import { Review } from "./interfaces";
 
 const app = angular.module("movieCardApp", []);
 
-app.controller("movieCardAppController", ($scope) => {
-    $scope.movie = movieData;
+app.controller("movieCardAppController", function () {
+    this.movie = movieData;
 
-    $scope.rating = 0;
-    $scope.changeStarRating = (newRating) => {
-        if (newRating === $scope.rating) {
-            $scope.rating = 0;
+    this.rating = 0;
+    this.changeStarRating = function (newRating) {
+
+        if (newRating === this.rating) {
+            this.rating = 0;
         } else {
-            $scope.rating = newRating;
+            this.rating = newRating;
         }
     };
 });
