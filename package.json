@@ -10,8 +10,8 @@
     "copyindex": "cp template.html distribution/index.html",
     "build": "npm run bundle && npm run styles && npm run copyindex",
     "lintless": "stylelint styles.less",
-    "lintjs": "eslint .",
-    "lint": "npm run lintless && npm run lintjs"
+    "lintts": "tslint -c tslint.json '*.ts'",
+    "lint": "npm run lintless && npm run lintts"
   },
   "repository": {
     "type": "git",
@@ -28,10 +28,11 @@
     "react": "^16.1.1"
   },
   "devDependencies": {
-    "eslint": "^4.12.0",
     "less": "^2.7.3",
     "mocha": "^4.0.1",
-    "stylelint": "^8.3.1",
+    "stylelint": "^8.3.1",  
+    "ts-loader": "^3.1.1",
+    "typescript": "^2.6.2",
     "webpack": "^3.8.1"
   },
   "description": ""

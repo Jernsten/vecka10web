@@ -1,4 +1,5 @@
-let $ = require("jquery");
+import { movieData } from "./data";
+import * as $ from "jquery";
 
 function renderMovie(movie) {
     $("#imgPic").attr("src", movie.imgUrl);
@@ -29,7 +30,6 @@ function changeStarRating(index) {
     }
 }
 
-import { movieData } from "./data";
 renderMovie(movieData);
 
 $(".stars").on("click", "span", function (e) {

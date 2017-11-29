@@ -184,3 +184,33 @@ renderMovie(movieData);
 __________________________________
 Om man vill linta något kan man skriva
 eslint . --fix efteråt
+
+
+_________________________________________
+TypsScript är javascript, men mer. Det går att byta filnamn från
+.js till .ts och det funkar bra.
+
+Webläsaren förstår inte typescript.
+Därför måste det kompileras till javascriptkod. Som LESS!
+
+TS ger oss bättre känsla i editorn.
+Vad tillägger TS?
+
+Vi kan typa variabler parametrar och funktioner.
+
+let name: String = 'foo;'
+function isAllowedInToTheBar(age: number): boolean { // tar in age av typ number och returnerar boolean.
+	return age >= 10;
+} // typannotering kan skippas, en TS-aware editor håller ändå koll på grejerna.
+
+Kraften med TS är att den gör en statisk analys av din kod.
+tex.
+let willHaveFunTonight = isAllowedInToTheBar(16);
+
+Med TS kan man skapa "mallar" eller pseudoklasser för objekt:
+
+type User {
+	name: string,
+	age: number
+}
+
