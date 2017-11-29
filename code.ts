@@ -6,6 +6,7 @@ function renderMovie(data: Review) {
     $("#imgPic").attr("src", data.imgUrl);
     $("#movieTitle").text(data.title);
     $("#movieDescription").text(data.description);
+    $("#pageTitle").text(data.pageTitle);
 
     const ul = document.getElementById("movieActors");
 

@@ -4,4 +4,5 @@ export type Review = {
     imgUrl: string;
     description: string;
     actors: string[];
+    pageTitle: string;
 };
